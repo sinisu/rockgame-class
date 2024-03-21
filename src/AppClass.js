@@ -43,7 +43,7 @@ export default class AppClass extends Component {
             resultSelect:"",
             viewIndex:0,
             hiddenSelect:"",
-            viewSelect:null,
+            viewSelect:viewChange[0],
         };
     }
 
