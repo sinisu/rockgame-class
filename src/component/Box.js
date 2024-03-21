@@ -1,8 +1,5 @@
 import React from 'react'
 
-
-const viewChange = ['✊','✌️','🖐️',]
-
 const Box = (props) => {
     let result;
     if (props.title === 'COMPUTER' && props.result !== 'TIE' && props.result !== '' && props.result !== null) {
@@ -13,7 +10,7 @@ const Box = (props) => {
   return (
     <div className={`box ${result}`}>
       <h1>{props.title}</h1>
-      <span className={`${props.viewHidden}`}>{viewChange[props.viewItem]}</span>
+      <span className={`${props.viewHidden}`}>{props.viewItem}</span>
       <span>{props.item && props.item.text}</span>
       <h1>{result === ''?'CHOOSE':result}</h1>
     </div>

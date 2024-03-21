@@ -32,6 +32,8 @@ const comItem = {
     },
 }
 
+const viewChange = ['✊','✌️','🖐️',]
+
 export default class AppClass extends Component {
     constructor() {
         super()
@@ -41,6 +43,7 @@ export default class AppClass extends Component {
             resultSelect:"",
             viewIndex:0,
             hiddenSelect:"",
+            viewSelect:null,
         };
     }
 
@@ -53,6 +56,7 @@ export default class AppClass extends Component {
           viewNumber=0;
         }  this.setState({
         viewIndex:viewNumber,
+        viewSelect:viewChange[this.state.viewIndex],
         })
       },500)
     }
@@ -86,8 +90,8 @@ export default class AppClass extends Component {
     return (
         <div className='main'>
             <div className='box-container'>
-                <Box title='YOU' item={this.state.userSelect} result={this.state.resultSelect} viewItem={this.state.viewIndex} viewHidden={this.state.hiddenSelect}/>
-                <Box title='COMPUTER' item={this.state.comSelect} result={this.state.resultSelect} viewItem={this.state.viewIndex} viewHidden={this.state.hiddenSelect}/>
+                <Box title='YOU' item={this.state.userSelect} result={this.state.resultSelect} viewItem={this.state.viewSelect} viewHidden={this.state.hiddenSelect}/>
+                <Box title='COMPUTER' item={this.state.comSelect} result={this.state.resultSelect} viewItem={this.state.viewSelect} viewHidden={this.state.hiddenSelect}/>
             </div>
             <div>
                 <button onClick={()=>this.Play('rock')}>✊</button>
