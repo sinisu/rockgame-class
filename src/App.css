@@ -15,7 +15,7 @@
   width: 20rem;
   padding: 3rem 0rem;
   margin: 1rem 0.5rem;
-  background-color: papayawhip;
+  background-color: rgb(227, 244, 255);
   text-align: center;
 }
 
@@ -31,6 +31,10 @@ button {
   margin: 0.25rem;
   padding: 0.25rem;
   cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(151, 252, 0);
 }
 
 .WIN{
